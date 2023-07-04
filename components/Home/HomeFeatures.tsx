@@ -11,32 +11,32 @@ const features = [
   {
     name: "Prepare your Testing Mindset",
     icon: LightBulbIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 1 Description, testing mindset section, please be patient with tests",
   },
   {
     name: "Learn What to Test",
     icon: BeakerIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 2 Description, what to learn section, please be learning our tests",
   },
   {
     name: "Debug Failing Tests Efficiently",
     icon: TerminalIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 3 Description, debug failing section, please be debugging your tests",
   },
   {
     name: "Learn Database Initialization & Seeding",
     icon: DatabaseIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 4 Description, database init & seed section, please be using databases on tests",
   },
   {
     name: "Understand Different Testing Types",
     icon: CodeIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 5 Description, different types section, please be changing the types of tests",
   },
   {
     name: "Apply your Knowledge",
     icon: AdjustmentsIcon,
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Grid 6 Description, applying knowledge section, please be appliying your tests",
   },
 ]
 

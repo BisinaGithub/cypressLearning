@@ -61,11 +61,11 @@ export default function HomeHero() {
                       className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl"
                     >
                       <span className="block text-gray-900">
-                        Testing Next.js Applications with Cypress
+                        Testing Next.js Applications with Cypress 
                       </span>
                     </h1>
                     <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Using this Next.Js Application to train my cypress knowledge inside an existing project
                     </p>
 
                     {/* Features */}
