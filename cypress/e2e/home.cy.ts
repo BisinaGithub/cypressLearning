@@ -2,18 +2,23 @@ describe('Home Page Tests', () => {
   beforeEach(() => {
     cy.viewport(1920,1080);
     cy.visit('/');
-    cy.clearAllCookies;
-    cy.clearAllLocalStorage;
-    cy.clearAllSessionStorage;
+    cy.clearAllLocalStorage();
   });
 
   context('Page Info', () => {
 
     context('First Section: Hero', () => {
-      it('the h1 contains the correct text', () => {
-        cy.getByData("hero-heading").contains(
+      it('Title contains the correct text', () => {
+        cy.getByData("hero-heading")
+          .contains(
           "Testing Next.js Applications with Cypress"); //custom command criado
       })
+      it('Subtitle contains the correct text', () => {
+        cy.getByData('hero-heading')
+          .next()
+          .should('have.text',
+          "Using this Next.Js Application to train my cypress knowledge inside an existing project");
+      });
       it('the features on the section are correct', () => {
         cy.get('dt')//retorna 3 objetos
         .eq(0)//especifica o primeiro do array a esquerda
@@ -24,7 +29,7 @@ describe('Home Page Tests', () => {
     });
 
     context('Second Section: Learning', () => {
-      it('the h1 contains the correct text', () => {
+      it('Title contains the correct text', () => {
         cy.get('.features .mt-2').should('have.text',"What you'll learn");
       })
       it('the features on the section are correct', () => {
@@ -41,6 +46,31 @@ describe('Home Page Tests', () => {
         cy.get('.grid .pt-6')
           .eq(5).find('h3').should('have.text',"Apply your Knowledge");
       });  
+    });
+
+    context('Third Section: Course 0', () => {
+      it('Title contains the correct text', () => {
+        cy.getByData('course-0').find('[data-test=course-title]')
+          .should('have.text',"Testing Your First Next.js Application")
+      });
+      it('Subtitle contains the correct text', () => {
+        cy.getByData('course-0').find('[data-test=course-description]')
+          .should('have.text',
+          "How to test a Next.js e-commerce app with Cypress.");
+      });
+      it('the features in the section are correct', () => {
+        cy.getByData('course-0')
+        .find('[data-test=lesson-0]')
+        .should('have.text',"App Install and Overview")
+        .next()
+        .should('have.text',"Installing Cypress and writing our first test")
+      });
+    });
+    context('Fourth Section: Course 1', () => {
+      
+    });
+    context('Fifth Section: Course 2', () => {
+      
     });
   });
   context('Courses Routing', () => {
